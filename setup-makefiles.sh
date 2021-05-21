@@ -20,11 +20,7 @@ set -e
 
 # Required!
 export DEVICE=j5xnlte
-export DEVICE_COMMON=j5x-common
+export DEVICE_SPECIFIED_COMMON=j5x-common
 export VENDOR=samsung
 
-export SETUP_DEVICE_DIR=1
-export SETUP_DEVICE_COMMON_DIR=0
-export SETUP_BOARD_COMMON_DIR=0
-
-./../../$VENDOR/$DEVICE_COMMON/setup-makefiles.sh $@
+"./../../${VENDOR}/${DEVICE_SPECIFIED_COMMON}/setup-makefiles.sh" "$@"
